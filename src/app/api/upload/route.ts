@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
         image_url: dataUrl,
         scale: parseInt(scale as string)
       }
-    });
+    }) as { image: { url: string } };
 
     return NextResponse.json({
       originalUrl: dataUrl,
