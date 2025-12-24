@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import LandingPage from './components/LandingPage';
 import BeforeAfterSlider from './components/BeforeAfterSlider';
 import ImageUploader from './components/ImageUploader';
@@ -10,6 +11,8 @@ import StepsSection from './components/StepsSection';
 import WhyChooseSection from './components/WhyChooseSection';
 import StickyImageScroll from './components/StickyImageScroll';
 import FeatureShowcase from './components/FeatureShowcase';
+import CustomerReviews from './components/CustomerReviews';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -34,12 +37,12 @@ export default function Home() {
             Enhance your images instantly with cutting-edge AI technology. Increase resolution, improve quality, and bring your visuals to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all hover:scale-105">
+            <Link href="/tools/image-upscaling" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all hover:scale-105 text-center">
               Get Started Free
-            </button>
-            <button className="border-2 border-violet-600 text-violet-600 px-8 py-3 rounded-full font-semibold hover:bg-violet-50 transition-colors">
+            </Link>
+            <Link href="/pricing" className="border-2 border-violet-600 text-violet-600 px-8 py-3 rounded-full font-semibold hover:bg-violet-50 transition-colors text-center">
               View Pricing
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -107,6 +110,10 @@ export default function Home() {
         </div>
         <FeatureShowcase />
       </section>
+      
+      <CustomerReviews />
+      
+      <FAQ />
       
       <Footer />
     </div>

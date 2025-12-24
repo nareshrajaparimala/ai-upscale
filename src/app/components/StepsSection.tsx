@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { Upload, Zap, Download, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function StepsSection() {
   const [selectedLevel, setSelectedLevel] = useState('2x');
@@ -205,10 +206,10 @@ export default function StepsSection() {
 
         {/* CTA Button */}
         <div className="flex justify-center mt-16">
-          <button className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg">
+          <Link href="/tools/image-upscaling" className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg">
             Try now
             <ChevronRight className="w-5 h-5" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
