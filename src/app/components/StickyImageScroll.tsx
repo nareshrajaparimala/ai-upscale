@@ -59,7 +59,7 @@ export default function StickyImageScroll() {
         {sections.map((section, index) => (
           <div
             key={section.id}
-            ref={el => sectionRefs.current[index] = el}
+            ref={el => { sectionRefs.current[index] = el; }}
             className="relative py-16 pl-12"
           >
             {/* Circle Dot */}
