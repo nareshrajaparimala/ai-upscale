@@ -73,7 +73,7 @@ export default function FeatureShowcase() {
         {features.map((feature, index) => (
           <div
             key={feature.id}
-            ref={el => featureRefs.current[index] = el}
+            ref={el => { featureRefs.current[index] = el; }}
             className="relative py-20 pl-8"
           >
             {/* Progress Dot */}
