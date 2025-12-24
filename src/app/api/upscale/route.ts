@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
         image_url: imageUrl,
         scale: parseInt(scale) || 2
       }
-    });
+    }) as { image: { url: string } };
 
     console.log('Upscale result:', result);
 
