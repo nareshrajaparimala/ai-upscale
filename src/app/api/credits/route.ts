@@ -44,6 +44,10 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Failed to fetch credits' }, { status: 500 })
     }
 
+    if (!userCredits) {
+      return NextResponse.json({ error: 'Failed to get user credits' }, { status: 500 })
+    }
+
     return NextResponse.json({ credits: userCredits.credits })
   } catch (error) {
     console.error('Credits API error:', error)
