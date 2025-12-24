@@ -214,7 +214,7 @@ export default function ImageEditor() {
 
     if (downloadFormat === 'pdf') {
       // For PDF, we'll create a simple PDF with the image
-      const { jsPDF } = await import('jspdf')
+      const jsPDF = (await import('jspdf')).default
       const pdf = new jsPDF()
       
       const img = new Image()
