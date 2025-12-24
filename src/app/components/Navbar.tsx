@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   const menuItems = {
-    tools: ['Image Upscaling', 'Background Removal', 'Object Detection', 'Style Transfer'],
+    tools: ['Image Upscaling', 'Background Remover', 'Object Detection', 'Style Transfer'],
     developers: ['API Documentation', 'SDKs', 'Code Examples', 'Pricing Plans'],
   };
 
