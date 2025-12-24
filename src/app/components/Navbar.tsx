@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Menu, X, Phone, User } from 'lucide-react';
+import { ChevronDown, Menu, X, User } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import CreditDisplay from './CreditDisplay';
 
@@ -108,15 +108,6 @@ export default function Navbar() {
               {/* Credit Display */}
               <CreditDisplay />
               
-              {/* Phone Number */}
-              <a
-                href="tel:+18666706790"
-                className="flex items-center space-x-2 text-gray-700 hover:text-violet-600 transition-colors text-sm"
-              >
-                <Phone size={16} />
-                <span className="hidden lg:inline">+1 866 670 7890</span>
-              </a>
-
               {/* Auth Section */}
               {loading ? (
                 <div className="w-8 h-8 animate-spin rounded-full border-2 border-violet-600 border-t-transparent"></div>
@@ -248,17 +239,6 @@ export default function Navbar() {
                 >
                   Pricing
                 </Link>
-              </div>
-
-              {/* Mobile Phone */}
-              <div className="py-2">
-                <a
-                  href="tel:+18666706790"
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-violet-600 transition-colors"
-                >
-                  <Phone size={16} />
-                  <span>+1 866 670 7890</span>
-                </a>
               </div>
 
               {/* Mobile Auth */}

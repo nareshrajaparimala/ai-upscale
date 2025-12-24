@@ -7,6 +7,9 @@ import ImageUploader from './components/ImageUploader';
 import CompanyLogos from './components/CompanyLogos';
 import StatsSection from './components/StatsSection';
 import StepsSection from './components/StepsSection';
+import WhyChooseSection from './components/WhyChooseSection';
+import StickyImageScroll from './components/StickyImageScroll';
+import FeatureShowcase from './components/FeatureShowcase';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -81,8 +84,29 @@ export default function Home() {
       {/* Stats Section */}
       <StatsSection />
       
+      {/* Why Choose Section */}
+      <WhyChooseSection />
+      
       {/* Steps Section */}
       <StepsSection />
+      
+      {/* Sticky Image Scroll Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">AI Enhancement Features</h2>
+          <p className="text-lg text-gray-600">Discover how our AI technology transforms your images.</p>
+        </div>
+        <StickyImageScroll />
+      </section>
+      
+      {/* Feature Showcase Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Feature Showcase</h2>
+          <p className="text-lg text-gray-600">Advanced AI capabilities for professional image enhancement.</p>
+        </div>
+        <FeatureShowcase />
+      </section>
       
       <Footer />
     </div>
